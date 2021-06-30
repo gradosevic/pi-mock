@@ -9,7 +9,7 @@ Please add the "pi-mock.js" script after Pi scripts:
 
 ```html
 
-<script src="https://sdk.minepi.com/pi-sdk.js?v=2.2"></script>
+<script src="https://sdk.minepi.com/pi-sdk.js"></script>
 <script>Pi.init({version: "2.0"})</script>
 ```
 
@@ -17,7 +17,7 @@ like this:
 
 ```html
 
-<script src="https://sdk.minepi.com/pi-sdk.js?v=2.2"></script>
+<script src="https://sdk.minepi.com/pi-sdk.js"></script>
 <script>Pi.init({version: "2.0"})</script>
 
 <!-- Pi Mock script -->
