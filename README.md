@@ -30,16 +30,16 @@ like this:
 The minimum required initialization for Pi Mock is:
 
 ```javascript
-    PiMock();
+PiMock();
 ```
 
 ## Configuring
 
 After including Pi Mock script, you can configure further the mocking behavior or pass the configuration directly into PiMock when initializing.
-This is the full example with all configuration set:
+This is the full example with all configuration properties set:
 
 ```javascript
-   PiMock({
+PiMock({
     production_domain: false,
     username: 'john_doe',
     uid: '12345678-1234-414e-b578-42e89d1f3c02',
@@ -54,19 +54,19 @@ This is the full example with all configuration set:
 });
 ```
 
-By default, PiMock will call success event handlers.
+By default, Pi Mock will call success event handlers.
 - "onReadyForServerApproval" and
 - "onReadyForServerCompletion", 2 seconds later
 
 ### Parameters
 
-- **production_domain**: (Optional|Default:false). Production domain name or subdomain (e.g. "example.com" or "subdomain.example.com"). If set, it will disable Pi Mock in production and use real Pi SDK instead, so you don't need to change your code with Pi Mock for production
-- **username**: (Optional|Default:"john_doe"). If set, it will return the provided username
-- **uid**: (Optional|Default:false). If set it will always return the provided uid, if not, it will always generate new uid
-- **payment_found**: (Optional|Default:false). Set this option with the expected payment object if you want to trigger "onOpenPaymentFound" event
-- **payment_error** (Optional|Default:false). If set to "true" it will trigger error event on payment failure
-- **payment_cancelled** (Optional|Default:false). If set to "true" it will trigger payment cancelled event
-- **debug** (Optional|Default:false). If set to "true" it will print out useful information in dev console
+- **production_domain**: (Optional | Default: false) Production domain name or subdomain (e.g. "example.com" or "subdomain.example.com"). If set, it will disable Pi Mock in production and use real Pi SDK instead, so you don't need to change your code with Pi Mock for production
+- **username**: (Optional | Default: "john_doe") If set, it will return the provided username
+- **uid**: (Optional | Default: false) If set it will always return the provided uid, if not, it will always generate new uid
+- **payment_found**: (Optional | Default: false) Set this option with the expected payment object if you want to trigger "onOpenPaymentFound" event
+- **payment_error** (Optional | Default: false) If set to "true" it will trigger error event on payment failure
+- **payment_cancelled** (Optional | Default: false) If set to "true" it will trigger payment cancelled event
+- **debug** (Optional | Default: false) If set to "true" it will print out useful information in dev console
 
 ## Known issues
 Please note that expected data returned in event handlers might not be the same as expected in Pi library. Feel free to test and contribute so we can improve this.
